@@ -141,9 +141,9 @@ class _HomeState extends State<Home> {
                                             size: 15,
                                           ),
                                           const SizedBox(width: 5),
-                                          Text(
-                                            "${card['rating']}",
-                                            style: const TextStyle(
+                                          const Text(
+                                            "4.8",
+                                            style: TextStyle(
                                               fontSize: 10,
                                             ),
                                           ),
