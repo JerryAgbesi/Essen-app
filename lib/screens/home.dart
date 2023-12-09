@@ -68,6 +68,51 @@ class _HomeState extends State<Home> {
         child: Stack(
           children: [
             Container(color: Colors.red.shade300),
+            Align(
+              alignment: Alignment.topCenter,
+              child: Padding(
+                padding: const EdgeInsets.only(top: 20.0),
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.transparent,
+                    border: Border.all(
+                      width: 2,
+                      color: Colors.white.withOpacity(0.5),
+                    ),
+                    borderRadius: BorderRadius.circular(35),
+                  ),
+                  height: 50,
+                  width: 180,
+                  child: const Center(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(
+                          "ASAP",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.w500),
+                        ),
+                        Icon(
+                          Icons.arrow_forward,
+                          color: Colors.white,
+                          size: 20,
+                        ),
+                        Text(
+                          "Work",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ),
             Positioned(
               bottom: 0,
               height: MediaQuery.of(context).size.height * 0.6,
@@ -184,6 +229,29 @@ class _HomeState extends State<Home> {
                 ).toList(),
               ),
             ),
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Padding(
+                padding: const EdgeInsets.only(bottom: 30.0),
+                child: Container(
+                  height: 50,
+                  width: 220,
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                    borderRadius: BorderRadius.circular(50),
+                  ),
+                  child: const Center(
+                    child: Text(
+                      "Order From Here",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w600,
+                          fontSize: 17),
+                    ),
+                  ),
+                ),
+              ),
+            )
           ],
         ),
       ),
