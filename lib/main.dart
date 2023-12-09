@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         title: 'Essen',
         theme: ThemeData(
           fontFamily: "Sanfrancisco",
-          useMaterial3: true,
+          useMaterial3: false,
         ),
         home: const Home(),
       ),
