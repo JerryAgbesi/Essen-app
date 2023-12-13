@@ -15,9 +15,26 @@ class _DetailsPageState extends State<DetailsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: const CustomScrollView(
-        slivers: <Widget>[
-          DetailsPageAppBar(),
+      body: Stack(
+        children: [
+          CustomScrollView(
+            slivers: <Widget>[
+              const DetailsPageAppBar(),
+              SliverList(
+                  delegate: SliverChildListDelegate([
+                Container(
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(20),
+                      topRight: Radius.circular(20),
+                    ),
+                  ),
+                )
+              ]))
+            ],
+          )
         ],
       ),
     );
