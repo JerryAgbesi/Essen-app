@@ -19,7 +19,7 @@ class _DetailsPageState extends State<DetailsPage> {
       body: Stack(children: [
         CustomScrollView(
           slivers: [
-            DetailsPageAppBar(pagecontent: widget.pageContent),
+            // DetailsPageAppBar(pagecontent: widget.pageContent),
           ],
         ),
       ]),
