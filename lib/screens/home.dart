@@ -49,44 +49,44 @@ class _HomeState extends State<Home> {
               Expanded(
                 child: Stack(
                   children: [
-
                     Align(
                       alignment: Alignment.topCenter,
                       child: Container(
-                        margin: const EdgeInsets.only(top: 10,bottom: 10),
-                                  padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
-                                  decoration: BoxDecoration(
-                                    border: Border.all(
-                                      width: 2,
-                                      color: Colors.white.withOpacity(0.5),
-                                    ),
-                                    borderRadius: BorderRadius.circular(35),
-                                  ),
-                                  child: const Row(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      Text(
-                                        "ASAP",
-                                        style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.w500),
-                                      ),
-                                      Icon(
-                                        Icons.arrow_forward,
-                                        color: Colors.white,
-                                        size: 20,
-                                      ),
-                                      Text(
-                                        "Work",
-                                        style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold),
-                                      ),
-                                    ],
-                                  ),
-                                ),
+                        margin: const EdgeInsets.only(top: 10, bottom: 10),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 20, vertical: 5),
+                        decoration: BoxDecoration(
+                          border: Border.all(
+                            width: 2,
+                            color: Colors.white.withOpacity(0.5),
+                          ),
+                          borderRadius: BorderRadius.circular(35),
+                        ),
+                        child: const Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(
+                              "ASAP",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w500),
+                            ),
+                            Icon(
+                              Icons.arrow_forward,
+                              color: Colors.white,
+                              size: 20,
+                            ),
+                            Text(
+                              "Work",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ],
+                        ),
+                      ),
                     ),
                     PageView.builder(
                       controller: _pageController,
@@ -103,8 +103,8 @@ class _HomeState extends State<Home> {
                             builder: (context, child) {
                               double value = 0;
                               if (_pageController.position.haveDimensions) {
-                                value =
-                                    index.toDouble() - (_pageController.page ?? 0);
+                                value = index.toDouble() -
+                                    (_pageController.page ?? 0);
                                 value = (value.abs() * 0.3).clamp(-1, 1);
                               } else {
                                 value = index == 1 ? 0.3 : 0.0;
@@ -125,7 +125,8 @@ class _HomeState extends State<Home> {
                                   Expanded(
                                     // flex: 4,
                                     child: Padding(
-                                      padding: EdgeInsets.only(top: value * 120),
+                                      padding:
+                                          EdgeInsets.only(top: value * 120),
                                       child: Container(
                                         margin: const EdgeInsets.symmetric(
                                             horizontal: 10),
@@ -177,8 +178,8 @@ class _HomeState extends State<Home> {
                                                   ],
                                                 ),
                                                 Text(
-                                                  provider
-                                                      .foodCards[index].description,
+                                                  provider.foodCards[index]
+                                                      .description,
                                                   style: kfoodCardBody,
                                                 ),
                                                 const Text("\$\$\$",
@@ -211,7 +212,8 @@ class _HomeState extends State<Home> {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) => DetailsPage(
-                                          pageContent: provider.foodCards[index],
+                                          pageContent:
+                                              provider.foodCards[index],
                                         )));
                           },
                           child: Container(
